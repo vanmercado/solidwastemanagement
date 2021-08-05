@@ -28,7 +28,6 @@ const Login = ({ handleCloseLogin }) => {
 				password,
 			};
 			axios
-				// .post("http://localhost:8000/api/user/login", loginBody)
 				.post(
 					'https://solid-waste-management-app.herokuapp.com/api/user/login',
 					loginBody

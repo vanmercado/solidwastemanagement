@@ -16,7 +16,6 @@ const Product = () => {
 	const [focus, setFocus] = useState(false);
 
 	useEffect(() => {
-		// axios('http://localhost:8000/api/statistics').then((res) => {
 		axios(
 			'https://solid-waste-management-app.herokuapp.com/api/statistics'
 		).then((res) => {

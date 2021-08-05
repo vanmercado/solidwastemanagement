@@ -52,7 +52,6 @@ const AddEvent = ({ handleCloseAddEvent, updateEvents }) => {
 				information,
 			};
 			axios
-				// .post('http://localhost:8000/api/waste', eventBody)
 				.post(
 					'https://solid-waste-management-app.herokuapp.com/api/waste',
 					eventBody

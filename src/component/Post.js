@@ -67,7 +67,6 @@ const Post = ({ event, updateEvents }) => {
 			};
 			axios
 				.put(
-					// `http://localhost:8000/api/waste/acknowledge/${event._id}`,
 					`https://solid-waste-management-app.herokuapp.com/api/waste/acknowledge/${event._id}`,
 					eventBody
 				)

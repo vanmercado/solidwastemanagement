@@ -54,7 +54,6 @@ const Main = () => {
 
 	const updateEvents = () => {
 		setLoading(true);
-		// axios(`http://localhost:8000/api/waste/${user._id}/${user.role}${page}`)
 		axios(
 			`https://solid-waste-management-app.herokuapp.com/api/waste/${user._id}/${user.role}${page}`
 		)
@@ -80,7 +79,7 @@ const Main = () => {
 	useEffect(() => {
 		if (user) {
 			setLoading(true);
-			// axios(`http://localhost:8000/api/waste/${user._id}/${user.role}${page}`)
+
 			axios(
 				`https://solid-waste-management-app.herokuapp.com/api/waste/${user._id}/${user.role}${page}`
 			)
