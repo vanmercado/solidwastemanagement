@@ -37,7 +37,11 @@ const ClaimEvent = ({ handleCloseClaimEvent, updateEvents, event }) => {
 				pickupTime: claimDate,
 			};
 			axios
-				.put(`http://localhost:8000/api/waste/claim/${event._id}`, eventBody)
+				// .put(`http://localhost:8000/api/waste/claim/${event._id}`, eventBody)
+				.put(
+					`https://solid-waste-management-app.herokuapp.com/api/waste/claim/${event._id}`,
+					eventBody
+				)
 				.then((res) => {
 					if (res.data.error) {
 						alert(res.data.error);

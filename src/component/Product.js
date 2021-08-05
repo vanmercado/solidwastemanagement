@@ -16,7 +16,10 @@ const Product = () => {
 	const [focus, setFocus] = useState(false);
 
 	useEffect(() => {
-		axios('http://localhost:8000/api/statistics').then((res) => {
+		// axios('http://localhost:8000/api/statistics').then((res) => {
+		axios(
+			'https://solid-waste-management-app.herokuapp.com/api/statistics'
+		).then((res) => {
 			setUserCount(res.data.userCount);
 			setWastesMonth(res.data.wastesMonth);
 			setWastesYear(res.data.wastesYear);

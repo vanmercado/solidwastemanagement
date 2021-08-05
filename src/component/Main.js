@@ -54,7 +54,10 @@ const Main = () => {
 
 	const updateEvents = () => {
 		setLoading(true);
-		axios(`http://localhost:8000/api/waste/${user._id}/${user.role}${page}`)
+		// axios(`http://localhost:8000/api/waste/${user._id}/${user.role}${page}`)
+		axios(
+			`https://solid-waste-management-app.herokuapp.com/api/waste/${user._id}/${user.role}${page}`
+		)
 			.then((res) => {
 				setEvents(res.data.wastes);
 				setPreviousPage(res.data.previous);
@@ -77,7 +80,10 @@ const Main = () => {
 	useEffect(() => {
 		if (user) {
 			setLoading(true);
-			axios(`http://localhost:8000/api/waste/${user._id}/${user.role}${page}`)
+			// axios(`http://localhost:8000/api/waste/${user._id}/${user.role}${page}`)
+			axios(
+				`https://solid-waste-management-app.herokuapp.com/api/waste/${user._id}/${user.role}${page}`
+			)
 				.then((res) => {
 					setEvents(res.data.wastes);
 					setPreviousPage(res.data.previous);

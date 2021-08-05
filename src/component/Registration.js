@@ -38,7 +38,11 @@ const Registration = ({ handleCloseRegistration, handleShowLogin }) => {
 				location: location.trim().toLowerCase(),
 			};
 			axios
-				.post('http://localhost:8000/api/user', registerBody)
+				// .post('http://localhost:8000/api/user', registerBody)
+				.post(
+					'https://solid-waste-management-app.herokuapp.com/api/user',
+					registerBody
+				)
 				.then((res) => {
 					if (res.data.error) {
 						setErrorMessage(res.data.error);

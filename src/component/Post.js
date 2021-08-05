@@ -19,7 +19,10 @@ const Post = ({ event, updateEvents }) => {
 		if (window.confirm('Are you sure you want to delete this post?')) {
 			setLoading(true);
 			axios
-				.delete(`http://localhost:8000/api/waste/${event._id}`)
+				// .delete(`http://localhost:8000/api/waste/${event._id}`)
+				.delete(
+					`https://solid-waste-management-app.herokuapp.com/api/waste/${event._id}`
+				)
 				.then((res) => {
 					updateEvents();
 					setLoading(false);
@@ -36,7 +39,10 @@ const Post = ({ event, updateEvents }) => {
 		if (window.confirm('Are you sure you want to cancel this event?')) {
 			setLoading(true);
 			axios
-				.put(`http://localhost:8000/api/waste/cancel/${event._id}`)
+				// .put(`http://localhost:8000/api/waste/cancel/${event._id}`)
+				.put(
+					`https://solid-waste-management-app.herokuapp.com/api/waste/cancel/${event._id}`
+				)
 				.then((res) => {
 					if (res.data.error) {
 						alert(res.data.error);
@@ -61,7 +67,8 @@ const Post = ({ event, updateEvents }) => {
 			};
 			axios
 				.put(
-					`http://localhost:8000/api/waste/acknowledge/${event._id}`,
+					// `http://localhost:8000/api/waste/acknowledge/${event._id}`,
+					`https://solid-waste-management-app.herokuapp.com/api/waste/acknowledge/${event._id}`,
 					eventBody
 				)
 				.then((res) => {
